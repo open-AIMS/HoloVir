@@ -6,7 +6,7 @@ Dependencies
 - [BBMAP 35](sourceforge.net/projects/bbmap/)  
 - [BioPerl 1.6.923](http://bioperl.org)  
 - [BioPython 1.66](http://biopython.org/)  
-- [BLAST 2.2.29+](http://doi.org/10.1186/1471-2105-10-421) ([ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/])
+- [BLAST 2.2.29+](http://doi.org/10.1186/1471-2105-10-421)
 - [BWA 0.7.12](http://doi.org/10.1093/bioinformatics/btp324)  
 - [Cd-hit 4.6](http://doi.org/10.1093/bioinformatics/btl158)  
 - [FastQC 0.11.5](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)  
