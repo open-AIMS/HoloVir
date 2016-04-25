@@ -3,7 +3,7 @@ HoloVir is a robust and flexible data analysis pipeline that provides an optimis
 
 Dependencies
 ---
-- [BBMAP 35](sourceforge.net/projects/bbmap/)  
+- [BBMAP 35](https://sourceforge.net/projects/bbmap/)  
 - [BioPerl 1.6.923](http://bioperl.org)  
 - [BioPython 1.66](http://biopython.org/)  
 - [BLAST 2.2.29+](http://doi.org/10.1186/1471-2105-10-421)
