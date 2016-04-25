@@ -1,0 +1,78 @@
+
+# GENERAL
+WORKDIR=$PWD                          # default: $PWD
+WORKTMPDIR=/tmp/$(basename $WORKDIR)  # default: /tmp/$(basename $WORKDIR)
+SCRIPTS=$PWD/scripts
+
+# DATABASES
+VIRREFSEQ=db/viral_refseq.faa
+MARKERDB=db/20151230_holovir_markers.faa
+SPROTDB=db/uniprot_sprot.fasta
+SPROTKW=db/uniprot_sprot.keywords.txt.gz
+EGGNOGDB=db/eggnog4.proteins.all.fa
+NOG_MEMBERS=db/NOG.members.tsv.gz
+FUNCCATEGORIES=db/eggnog4.functional_categories.txt
+
+# CLUSTER
+BLASTDBTMPDIR=/tmp/aims/db
+LOCKDIR=/$PWD/locks
+
+# PREPROCESS
+PP_DATADIR=$WORKDIR/data
+PP_DIR=$WORKDIR/00preprocess
+PP_TMPDIR=$WORKTMPDIR/preprocess
+
+# REFSEQ READS
+RR_DATADIR=$PP_DIR/results
+RR_DIR=$WORKDIR/01refseqreads
+RR_TMPDIR=$WORKTMPDIR/refseqreads
+RR_CHUNKSIZE=500 # default: 500
+
+# MARKER READS
+MR_DATADIR=$PP_DIR/results
+MR_DIR=$WORKDIR/02markerreads
+MR_TMPDIR=$WORKTMPDIR/markerreads
+MR_CHUNKSIZE=500  # default: 500
+
+# ASSEMBLY
+AS_DATADIR=$WORKDIR/data
+AS_DIR=$WORKDIR/03assembly
+
+# GENE PREDICTION
+GP_DATADIR=$AS_DIR/results
+GP_DIR=$WORKDIR/04geneprediction
+
+# REFSEQ GENES
+RG_DATADIR=$GP_DIR/results
+RG_DIR=$WORKDIR/05refseqgenes
+RG_TMPDIR=$WORKTMPDIR/refseqgenes
+RG_CHUNKSIZE=1000  # default: 1000
+
+# MARKER GENES
+MG_DATADIR=$GP_DIR/results
+MG_DIR=$WORKDIR/06markergenes
+MG_TMPDIR=$WORKTMPDIR/markergenes
+MG_CHUNKSIZE=500  # default: 500
+
+# SWISSPROT GENES
+UNIPROT_SPROT_FASTA=ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+UNIPROT_SPROT_XML=ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+SG_DATADIR=$GP_DIR/results
+SG_DIR=$WORKDIR/07swissprotgenes
+SG_TMPDIR=$WORKTMPDIR/swissprotgenes
+SG_CHUNKSIZE=1000 # default: 1000
+
+# EGGNOG GENES
+EGGNOGDB_ONLINE=http://eggnogdb.embl.de/download/eggnog_4.1/eggnog4.proteins.all.fa.gz
+NOG_MEMBERS_ONLINE=http://eggnogdb.embl.de/download/eggnog_4.1/data/NOG/NOG.members.tsv.gz
+FUNCCATEGORIES_ONLINE=http://eggnogdb.embl.de/download/eggnog_4.1/eggnog4.functional_categories.txt
+EG_DATADIR=$GP_DIR/results
+EG_DIR=$WORKDIR/08eggnoggenes
+EG_TMPDIR=$WORKTMPDIR/eggnoggenes
+EG_CHUNKSIZE=200 # default: 200
+
+
+
+
+
+
