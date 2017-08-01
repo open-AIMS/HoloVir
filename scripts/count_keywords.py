@@ -39,8 +39,7 @@ if use_magnitudes:
   #else: 1/0
   for entry in SeqIO.parse(fin, "fasta"):
     assert entry.id not in magnitude_by_name
-    magnitudematch = magnitudepattern.match(entry.description)
-    if not magnitudematch:
+    magnitudematch = magnitudepattern.match(entry.description)    if not magnitudematch:
       magnitude_by_name[entry.id] = 1
       sys.stderr.write("Could not extract magnitude for protein %s from header %s, assuming magnitude=1.\n" % (entry.id, entry.description))
     else:
@@ -75,7 +74,7 @@ elif file_type(bxfilename) == "text": fin = open(bxfilename)
 for ind, line in enumerate(fin):
   parts = line.strip().split("\t")
   if len(parts) > 2:
-    spname = parts[1].split("|")[1]
+    spname = parts[1].split("|")[01]
     assert spname
     if keywords_by_swissprotid.has_key(spname):
       annotated_or_not["annotated"].append(spname)
