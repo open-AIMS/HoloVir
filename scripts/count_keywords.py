@@ -30,7 +30,7 @@ def file_type(filename):
 
 
 # get magnitudes from query fasta file
-if use_magnitudes:
+f use_magnitudes:
   magnitude_by_name={}
   # We currently assume a FASTA formatted sequence file with magnitudes in header such as for MEGAN
   magnitudepattern=re.compile(r".*magnitude=(\d+).*")
@@ -55,8 +55,7 @@ elif file_type(kwfilename) == "text": fin = open(kwfilename)
 #else: 1/0
 for line in fin:
   parts = line.strip().split("\t")
-  (name, description) = parts[:2]
-  keywords = parts[2:]
+  (name, description) = parts[:2]  keywords = parts[2:]
   keywords_by_swissprotid[name] = keywords
   for kw in keywords:
     scount += 1
@@ -74,7 +73,7 @@ elif file_type(bxfilename) == "text": fin = open(bxfilename)
 for ind, line in enumerate(fin):
   parts = line.strip().split("\t")
   if len(parts) > 2:
-    spname = parts[1].split("|")[01]
+    spname = parts[1].split("|")[0]
     assert spname
     if keywords_by_swissprotid.has_key(spname):
       annotated_or_not["annotated"].append(spname)
