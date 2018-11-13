@@ -18,6 +18,8 @@ RESULTDIR=$SG_DIR/results
 CHUNKSIZE=$SG_CHUNKSIZE
 JOBNAMEBASE=Holovir_SG
 
+module load ncbiblastplus
+
 # prepare directory structure
 [ "$(ls -A $SG_DIR 2>/dev/null)" ] && { echo "$SG_DIR not empty. Stop."; exit 1; }
 [ -n "$SG_TMPDIR" ] && rm -rf $SG_TMPDIR || { echo "SG_TMPDIR not set. Stop."; exit 1; }
