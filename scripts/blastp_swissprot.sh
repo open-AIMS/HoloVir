@@ -21,7 +21,7 @@ BLASTTMPDIR=$3
 LOCKDIR=$4
 
 mkdir -p -m 2775 $BLASTTMPDIR $LOCKDIR
-
+module load ncbiblastplus
 FILES2TRANSFER=$(rsync -a -n -v $BLASTDB* $BLASTTMPDIR/ | grep "^$(basename $BLASTDB)" | wc -l)
 if [ $FILES2TRANSFER -gt 0 ] ; then
  ERROR=0
