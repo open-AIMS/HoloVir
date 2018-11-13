@@ -1,7 +1,7 @@
 
 # GENERAL
 WORKDIR=$PWD                          # default: $PWD
-WORKTMPDIR=/tmp/$(basename $WORKDIR)  # default: /tmp/$(basename $WORKDIR)
+WORKTMPDIR=/scratch/aims/$(basename $WORKDIR)  # default: /scratch/aims/$(basename $WORKDIR)
 SCRIPTS=$PWD/scripts
 
 # DATABASES
